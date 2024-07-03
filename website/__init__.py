@@ -14,14 +14,22 @@ def create_app():
     app.config['SECRET_KEY'] = 'Hello World'
     app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:A6d0a6m1!@localhost/socl'
     db.init_app(app)
-    # login_manager = LoginManager()
-    # login_manager.init_app(app)
+
 
 
     app.register_blueprint(views_blueprint, url_prefix='/')
     app.register_blueprint(user_blueprint, url_prefix='/')
 
-    from website.models import user
+    from website.models.user import User
+
+    login_manager = LoginManager()
+    login_manager.init_app(app)
+    login_manager.login_view = 'user_bp.login'
+
+    @login_manager.user_loader
+    def load_user(id):
+        return User.query.get(int(id))
+
 
     with app.app_context():
         db.drop_all()
