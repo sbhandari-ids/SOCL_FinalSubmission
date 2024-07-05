@@ -24,7 +24,7 @@ def create_app():
 
     login_manager = LoginManager()
     login_manager.init_app(app)
-    login_manager.login_view = 'user_bp.login'
+    login_manager.login_view = 'views_bp.main'
 
     @login_manager.user_loader
     def load_user(id):
@@ -32,7 +32,7 @@ def create_app():
 
 
     with app.app_context():
-        db.drop_all()
+        # db.drop_all()
         db.create_all()    
 
     return app

@@ -4,8 +4,9 @@ from flask import flash, redirect, url_for
 from flask_login import login_user, login_required, logout_user, current_user
 from website.database import db
 
-def create_user(user_data):
-    new_user = User(first_name=user_data['nameF'], last_name=user_data['nameL'], age=user_data['age'], password=generate_password_hash(user_data['password']), email=user_data['email'], phone=user_data['phone'])
+def create_user(email, password):
+    # new_user = User(first_name=user_data['nameF'], last_name=user_data['nameL'], age=user_data['age'], password=generate_password_hash(user_data['password']), email=user_data['email'], phone=user_data['phone'])
+    new_user = User(email=email, password=generate_password_hash(password))
     db.session.add(new_user)
     db.session.commit()
     login_user(new_user, remember=True)
