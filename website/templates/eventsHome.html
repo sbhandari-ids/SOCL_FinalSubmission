@@ -43,10 +43,10 @@
             <section>
                     <div class="flexbox-col">
                     
-                        <input type="button" name="menu1" class="menu" id="menu1" value="Discover">
-                        <input type="button" name="menu2" class="menu" id="menu2" value="Upcoming">
-                        <input type="button" name="menu3" class="menu" id="menu3" value="Nearby">
-                        <input type="button" name="menu4" class="menu" id="menu4" value="Nightclubs">
+                        <a href="http://127.0.0.1:5000/event/free"><input type="button" name="menu1" class="menu" id="menu1" value="Discover"></a>
+                        <a href="http://127.0.0.1:5000/event/upcoming"><input type="button" name="menu2" class="menu" id="menu2" value="Upcoming"></a>
+                        <a href="http://127.0.0.1:5000/event/nearby"><input type="button" name="menu3" class="menu" id="menu3" value="Nearby"></a>
+                        <a href="http://127.0.0.1:5000/event/nightclubs"><input type="button" name="menu4" class="menu" id="menu4" value="Nightclubs"></a>
                    
                     </div>
                 
@@ -57,9 +57,8 @@
                         <input class="right-legend" type="button"> See All> 
                     </div>
                     <div class="flexbox-col">
-                        <div class="box event-display" style="background-image: url('https://media.istockphoto.com/id/1053940970/photo/empty-nightclub-dance-floor.jpg?s=612x612&w=0&k=20&c=p29ZA5C9YN7d-iyiK7yEOWbCTe5xy9TEVD8pxCbdMEk='); background-size:contain; text-align: center; ">{{ events[0].event_name}}</div>
-                        
-                        <div class="box event-display" style="background-image: url('https://t4.ftcdn.net/jpg/00/58/92/25/360_F_58922552_l2tvyZbVgE0iiPirSa8DXsSejznxoRfQ.jpg'); background-size:contain; text-align: center;">{{ events[1].event_name}}</div>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[0].id }}" style="background-image: url('https://media.istockphoto.com/id/1053940970/photo/empty-nightclub-dance-floor.jpg?s=612x612&w=0&k=20&c=p29ZA5C9YN7d-iyiK7yEOWbCTe5xy9TEVD8pxCbdMEk='); background-size:contain; text-align: center; ">{{ events[0].event_name}}</a>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[1].id }}" style="background-image: url('https://t4.ftcdn.net/jpg/00/58/92/25/360_F_58922552_l2tvyZbVgE0iiPirSa8DXsSejznxoRfQ.jpg'); background-size:contain; text-align: center;">{{ events[1].event_name}}</a>
                     </div>     
                 </section>
 
@@ -69,8 +68,8 @@
                         <input class="right-legend" type="button"> See All> 
                     </div>
                     <div class="flexbox-col">
-                        <div class="box event-display" style="background-image: url('https://media.istockphoto.com/id/521651569/photo/nightclub-with-colorful-lights.jpg?s=612x612&w=0&k=20&c=mF7E4Q4y47CAjHkjOqgRqWoRJXhcYdXuIQQlDQ23c-c='); background-size:contain; text-align: center;">{{ events[2].event_name}}</div>
-                        <div class="box event-display" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDOAqCLndSRM9HCufpFHnL9-kgItOcQ1_Khw&s'); background-size:contain; text-align: center;">{{ events[3].event_name}}</div>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[2].id }}" style="background-image: url('https://media.istockphoto.com/id/521651569/photo/nightclub-with-colorful-lights.jpg?s=612x612&w=0&k=20&c=mF7E4Q4y47CAjHkjOqgRqWoRJXhcYdXuIQQlDQ23c-c='); background-size:contain; text-align: center;">{{ events[2].event_name}}</a>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[3].id }}" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDOAqCLndSRM9HCufpFHnL9-kgItOcQ1_Khw&s'); background-size:contain; text-align: center;">{{ events[3].event_name}}</a>
                     </div>     
                 </section>
 
@@ -80,8 +79,8 @@
                         <input class="right-legend" type="button"> See All> 
                     </div>
                     <div class="flexbox-col">
-                        <div class="box event-display" style="background-image: url('https://static01.nyt.com/images/2018/02/08/fashion/01boite1/01boite1-articleLarge.jpg?quality=75&auto=webp&disable=upscale'); background-size:contain; text-align: center;">{{ events[4].event_name}}</div>
-                        <div class="box event-display" style="background-image: url('https://imageio.forbes.com/specials-images/imageserve/5d3a3554f1176b000897ad5c/Pyramid-party-at-Amnesia-/960x0.jpg?format=jpg&width=960'); background-size:contain; text-align: center;">{{ events[5].event_name}}</div>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[4].id }}" style="background-image: url('https://static01.nyt.com/images/2018/02/08/fashion/01boite1/01boite1-articleLarge.jpg?quality=75&auto=webp&disable=upscale'); background-size:contain; text-align: center;">{{ events[4].event_name}}</a>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[5].id }}" style="background-image: url('https://imageio.forbes.com/specials-images/imageserve/5d3a3554f1176b000897ad5c/Pyramid-party-at-Amnesia-/960x0.jpg?format=jpg&width=960'); background-size:contain; text-align: center;">{{ events[5].event_name}}</a>
                     </div>     
                 </section>
 
