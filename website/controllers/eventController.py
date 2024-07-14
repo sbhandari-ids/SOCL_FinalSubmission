@@ -1,5 +1,5 @@
 from flask import request, render_template, jsonify, flash, redirect, url_for, session
-from website.services.events_services import get_event_by_id
+from website.services.events_services import get_event_by_id, get_free_events
 
 
 
@@ -19,4 +19,9 @@ def nightclub_events():
     return '<h1>Nightclubs</h1>'
 
 def free_events():
-    return '<h1>Free events</h1>'
+    events = get_free_events()
+    output = '<h1>'
+    for event in events:
+        output += event.event_name
+    output += '</h1'
+    return output
