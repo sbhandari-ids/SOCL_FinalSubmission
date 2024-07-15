@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="loginPage.css" rel="stylesheet">
-    <title>Document</title>
+    <title>Enter Name</title>
 </head>
 <body>
-    <main>
-        <div class="login-container"
-            <section>
-                <article>
-                    <h3 class="name_label">Enter your name</h3>
-                </article>
-                <article>
-                    <label id="textbox_name" name="textbox_name">Enter your name for others to see</label>
-                    <input type="text" for="textbox_name" />
-                </article>
-            </section>
-            <section>
-                <p> By selecting your age, you agree to Party Pulser's Terms and Privacy Policy </p>
-                <button class="login-btn apple">Continue</button>            </section>
+    
+        <div class="login-container">
+        <section class="left-container subheading">
+           
+            <h3>Enter your name</h3>
+     </section>
+     <section> 
+        <fieldset>
+            <form method="post" action="">
+            <label id="textbox_name" name="textbox_name">Enter your name for others to see</label>
+            <input for="textbox_name" type="text" class="full-input"/>
+    
+        <p>By selecting your age, you agree to Party Pulser's <a href="#"> Terms</a> and <a href="#">Privacy Policy</a></a></p>
+        <button class="login-btn filled-btn" type="submit">Continue</button>    
+        </form>
+        </fieldset>        
+    </section>
+   
+    
+</div>
         </div>
-    </main>
+   
     
 </body>
 </html>

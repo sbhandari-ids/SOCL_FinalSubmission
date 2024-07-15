@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="loginPage.css" rel="stylesheet">
+    <link href="events.css" rel="stylesheet" >
+    <!-- <link href="footer.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+   
+    <title> Master Filter</title>
+</head>
+
+<body>
+    <div class="login-container"
+            <section> 
+                <div class=" flexbox-col">
+                <h4> Hi {{User}} </h4>
+                <p> <i class="fa-regular fa-user"></i></p>
+                </div>
+                <div class="left-text">
+                    <!-- <p>Here is what we got for you </p> -->
+                    <input type="text" class="full-input" placeholder="What do you feel like doing?" >
+                </div>
+                
+            </section>
+
+            <section>
+                    <div class="flexbox-col">
+                    
+                        <input type="button" name="menu1" class="menu" id="menu1" value="Discover">
+                        <input type="button" name="menu2" class="menu" id="menu2" value="Upcoming">
+                        <input type="button" name="menu3" class="menu" id="menu3" value="Nearby">
+                        <input type="button" name="menu4" class="menu" id="menu4" value="Nightclubs">
+                   
+                    </div>
+                
+                </section>
+            <section>
+                    <div class="flexbox-col">
+                        <p class="section-legend">Popular</p>
+                        <p>
+                            <input class="right-legend" type="button"> See All <i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </div>
+                    <div class="flexbox-col">
+                        <div class="box event-display"></div>
+                        <div class="box event-display"></div>
+                    </div>     
+                </section>
+
+                <section>
+                    <div class="flexbox-col">
+                        <p class="section-legend">Recommended</p>
+                        <p>
+                            <input class="right-legend" type="button">See All <i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </div>
+                    <div class="flexbox-col">
+                        <div class="box event-display"></div>
+                        <div class="box event-display"></div>
+                    </div>     
+                </section>
+
+                <section>
+                    <div class="flexbox-col">
+                        <p class="section-legend">Trending</p>
+                        <p>
+                            <input class="right-legend" type="button"> See All <i class="fa-solid fa-chevron-right"></i>
+                        </p>
+                    </div>
+                    <div class="flexbox-col">
+                        <div class="box event-display"></div>
+                        <div class="box event-display"></div>
+                    </div>     
+                </section>
+
+            </section>
+            <section>
+                <footer>
+                    <div class="footer-menu">
+                        <a href="#home">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <a href="#favorite">
+                            <i class="fas fa-star"></i>
+                        </a>
+                        <a href="#gift">
+                            <i class="fas fa-gift"></i>
+                        </a>
+                        <a href="#heart">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                </footer>
+            </section>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="loginPage.css" rel="stylesheet">
@@ -9,25 +12,23 @@
 <body>
     
         <div class="login-container left-container"
-            <section>
+            <section class="header">
                 <article>
-                    <h3 class="code_label">Get notified about cool events nearby</h3>
-                    <p>You can change these settings later</p>
+                    <h2 class="code_label">Notifications</h2>
+                    <p>Get notified about recent updates, events and many more</p>
                 </article>
             </section>
             <section>
                 <form action="" >
       
-                    <h3 class="subheading">Subheading</h3>
-                    <input id="value1" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value1"/><label for="value1"> Event Type 1 </label> <br/>
-                    <input id="value2" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value2"/> <label for="value2">Event Type 2 </label><br/>
-                    <input id="value3" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value3"/><label for="value3"> Event Type 3</label><br/>
-                    <input id="value4" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value4"/><label for="value4"> Event Type 4 </label> <br/>
-                    <input id="value5" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value5"/> <label for="value5">Event Type 5 </label><br/>
+                    <input id="value1" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value1"/><label for="value1"> New Features </label> <br/>
+                    <input id="value2" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value2"/> <label for="value2">Events Friends Attend </label><br/>
+                    <input id="value3" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value3"/><label for="value3"> Time of Events</label><br/>
+                    <input id="value4" class="password-rules" type="checkbox" class="event-notification" name="event-notification" value="value4"/><label for="value4"> Safety Alerts </label> <br/>
 
-                    <div class="btn-container">    
-                      <button class="login-btn apple half-btn">Later</button>  
-                      <button class="login-btn gmail half-btn">Turn On</button>  
+                    <div class="btn-container fixed-bottom">    
+                      <button class="login-btn filled-btn">Yes notify me</button>  
+                      <a href="">Skip for now</a>
                     </div>
                  </form>
              </section>
