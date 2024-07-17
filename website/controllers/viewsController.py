@@ -6,7 +6,10 @@ from flask_login import login_required, current_user
 @login_required
 def home():
     events = get_events()
-    return render_template('eventsHome.html', user = current_user, events = events)
+    return render_template('home.html', user = current_user, events = events)
 
-def main():
-    return render_template('signInSignUp4.html')
+def start():
+    return render_template('start.html')
+
+def landing_page():
+    return render_template('landingPage.html')

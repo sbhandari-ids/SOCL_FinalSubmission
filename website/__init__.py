@@ -1,3 +1,5 @@
+import googlemaps
+
 from flask import Flask
 from website.schemas import ma
 from flask_sqlalchemy import SQLAlchemy
@@ -5,10 +7,15 @@ from os import path
 from website.database import db
 from flask_login import LoginManager
 
+
 from website.routes.viewsBP import views_blueprint
 from website.routes.userBP import user_blueprint
 from website.routes.eventBP import event_blueprint
 
+# API = open('maps_key.txt', 'r')
+# APIKey = API.read()
+
+# Maps = googlemaps.Client(key = APIKey)
 
 def create_app():
     app = Flask(__name__)
@@ -26,7 +33,7 @@ def create_app():
 
     login_manager = LoginManager()
     login_manager.init_app(app)
-    login_manager.login_view = 'views_bp.main'
+    login_manager.login_view = 'views_bp.landing_page'
 
     @login_manager.user_loader
     def load_user(id):
@@ -40,5 +47,4 @@ def create_app():
     return app
 
 
-# AIzaSyAtJ7llR6PgPC5skxCee2ao4umEAaXBfg8
 

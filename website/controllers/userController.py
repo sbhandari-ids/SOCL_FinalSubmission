@@ -3,21 +3,30 @@ from website.services.userServices import create_user, loginU
 from flask_login import login_user, login_required, logout_user, current_user
 
 
+def sign_up_name():
+    if request.method == 'GET':
+        return render_template('signup_name.html')
+    elif request.method == 'POST':
+        username = request.form.get('name')
+        session['username'] = username
+        return redirect(url_for('user_bp.signup_email'))
+
 
 def signup_email():
     if request.method == 'GET':
-        return render_template("email_signup.html")
+        return render_template("signup_email.html")
     elif request.method == 'POST':
         user_email = request.form.get('email')
-        return redirect(url_for('user_bp.signup_password', username = user_email))
+        session['email'] = user_email
+        return redirect(url_for('user_bp.signup_password'))
 
 
-def signup_password(username):
+def signup_password():
     if request.method == 'GET':
-        return render_template('enterpassword13.html')
+        return render_template('signup_password.html')
     elif request.method == 'POST':
         password = request.form.get('password')
-        create_user(email=username, password=password)
+        create_user(email=session['email'], password=password, username=session['username'])
         return redirect(url_for('views_bp.home'))
 
 def login():
@@ -34,7 +43,7 @@ def login():
         
 def logout():
     logout_user()
-    return redirect(url_for('views_bp.main'))
+    return redirect(url_for('views_bp.home'))
 
 
 
