@@ -8,8 +8,9 @@ class UserSchema(ma.Schema):
     phone = fields.String(required=True)
     age = fields.String(required=True)
     password = fields.String(required=True)
+    picture_path = fields.String(required=True)
 
     class Meta:
-        fields = ("id", "username", "email", "phone", "age", "password")
+        fields = ("id", "username", "email", "phone", "age", "password", 'picture_path')
 
 user_input_schema = UserSchema()

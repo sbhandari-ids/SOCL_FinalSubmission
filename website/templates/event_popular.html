@@ -29,11 +29,13 @@
 {% for event in events %}
 <section class="section-gap">
                 
-    <div style= "background-image: url('https://media.istockphoto.com/id/1053940970/photo/empty-nightclub-dance-floor.jpg?s=612x612&w=0&k=20&c=p29ZA5C9YN7d-iyiK7yEOWbCTe5xy9TEVD8pxCbdMEk=');
+    <div style= "background-image: url('{{ event.image_url }}; ');
         height: 220px;
         width: 100%;
         border: 1px solid rgb(234, 227, 227);
-        background-size: cover;">
+        background-size: contain; 
+        background-position: center; 
+        background-repeat: no-repeat">
 
         <p>{{ event.event_name }}</p>
 

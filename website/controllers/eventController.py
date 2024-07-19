@@ -5,8 +5,6 @@ from website.services.events_services import get_event_by_id, get_free_events, g
 
 def view_event(id):
     event = get_event_by_id(id)
-    print(event)
-    string = '<h1>' + event.event_name + '</h1>'
     return render_template('event_details.html', event=event)
 
 def upcoming_events():

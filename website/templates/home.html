@@ -26,7 +26,9 @@
                 <a href="./logout"><p href=""> <i class="fa-regular fa-user"></i></p></a>
                 </div>
                 <div class="left-text">
-                    <input type="text" class="full-input" placeholder="Search all events" >
+                    <form method="POST">
+                        <input type="search" id="search" name="search" class="full-input" placeholder="Search all events" >
+                    </form>
                 </div>
                 
             </section>
@@ -50,8 +52,23 @@
                         </a>
                     </div>
                     <div class="flexbox-col">
-                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[0].id }}" style="background-image: url('https://media.istockphoto.com/id/1053940970/photo/empty-nightclub-dance-floor.jpg?s=612x612&w=0&k=20&c=p29ZA5C9YN7d-iyiK7yEOWbCTe5xy9TEVD8pxCbdMEk='); background-size:cover; text-align: center; ">{{ events[0].event_name}}</a>
-                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[1].id }}" style="background-image: url('https://t4.ftcdn.net/jpg/00/58/92/25/360_F_58922552_l2tvyZbVgE0iiPirSa8DXsSejznxoRfQ.jpg'); background-size:cover; text-align: center;">{{ events[1].event_name}}</a>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[0].id }}" style="
+                                background-image: url('{{ events[0].image_url }}'); 
+                                text-align: center; background-size: contain; 
+                                background-position: center; 
+                                background-repeat: no-repeat">
+                            {{ events[0].event_name}}
+                        </a>
+
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[1].id }}" style="
+                            background-image: url('{{ events[1].image_url }}'); 
+                            text-align: center; 
+                            background-size: contain; 
+                            background-position: center; 
+                            background-repeat: no-repeat">
+                            {{ events[1].event_name}}
+                        </a>
+
                     </div>     
                 </section>
 
@@ -63,8 +80,24 @@
                         </a>
                     </div>
                     <div class="flexbox-col">
-                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[2].id }}" style="background-image: url('https://media.istockphoto.com/id/521651569/photo/nightclub-with-colorful-lights.jpg?s=612x612&w=0&k=20&c=mF7E4Q4y47CAjHkjOqgRqWoRJXhcYdXuIQQlDQ23c-c='); background-size:cover; text-align: center;">{{ events[2].event_name}}</a>
-                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[3].id }}" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDOAqCLndSRM9HCufpFHnL9-kgItOcQ1_Khw&s'); background-size:cover; text-align: center;">{{ events[3].event_name}}</a>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[2].id }}" style="
+                            background-image: url('{{ events[2].image_url }}'); 
+                            text-align: center; 
+                            background-size: contain; 
+                            background-position: center; 
+                            background-repeat: no-repeat">
+                            {{ events[2].event_name}}
+                        </a>
+
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[3].id }}" style="
+                            background-image: url('{{ events[3].image_url }}'); 
+                            text-align: center; 
+                            background-size: contain; 
+                            background-position: center; 
+                            background-repeat: no-repeat">
+                            {{ events[3].event_name}}
+                        </a>
+
                     </div>     
                 </section>
 
@@ -76,8 +109,23 @@
                         </a>
                     </div>
                     <div class="flexbox-col">
-                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[4].id }}" style="background-image: url('https://static01.nyt.com/images/2018/02/08/fashion/01boite1/01boite1-articleLarge.jpg?quality=75&auto=webp&disable=upscale'); background-size:cover; text-align: center;">{{ events[4].event_name}}</a>
-                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[5].id }}" style="background-image: url('https://imageio.forbes.com/specials-images/imageserve/5d3a3554f1176b000897ad5c/Pyramid-party-at-Amnesia-/960x0.jpg?format=jpg&width=960'); background-size:cover; text-align: center;">{{ events[5].event_name}}</a>
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[4].id }}" style="
+                            background-image: url('{{ events[4].image_url }}'); 
+                            text-align: center;
+                            background-size: contain; 
+                            background-position: center; 
+                            background-repeat: no-repeat" ">
+                            {{ events[4].event_name}}
+                        </a>
+
+                        <a class="box event-display" href="http://127.0.0.1:5000/event/{{ events[5].id }}" style="
+                            background-image: url('{{ events[5].image_url }}'); 
+                            text-align: center; 
+                            background-size: contain; 
+                            background-position: center; 
+                            background-repeat: no-repeat">
+                            {{ events[5].event_name}}
+                        </a>
                     </div>     
                 </section>
 

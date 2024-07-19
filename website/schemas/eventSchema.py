@@ -11,11 +11,15 @@ class EventSchema(ma.Schema):
     end_time = fields.String(required=True)
     event_type = fields.String(required=True)
     music_type = fields.String(required=True)
-    organizer = fields.String(required=True)
     entry_fees = fields.String(required=True)
+    address = fields.String(required=True)
+    coordinates_lat = fields.Float(required=True)
+    coordinates_long = fields.Float(required=True)
+    image_url = fields.String(required=True)
+
     
     class Meta:
-        fields = ("id", "event_name", "description", "event_date", "venue", "start_time", "end_time", "event_type", "music_type", "organizer", "entry_fees")
+        fields = ("id", "event_name", "description", "event_date", "venue", "start_time", "end_time", "event_type", "music_type", "entry_fees", 'address', 'coordinates_lat', 'coordinates_long', 'image_url')
 
 event_schema = EventSchema()
 

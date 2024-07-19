@@ -8,3 +8,4 @@ class User(db.Model, UserMixin):
     username = db.Column(db.String(150))
     age = db.Column(db.String(150))
     phone = db.Column(db.String(150))
+    picture_path = db.Column(db.String(150))

@@ -28,3 +28,8 @@ def get_recommended_events():
 def get_trending_events():
     trend_events = Event.query.filter_by(event_type='Trending').all()
     return trend_events
+
+def get_searched_events(search):
+    event = Event.query.filter(Event.event_name.like('%' + search + '%'))
+    event = event.order_by(Event.event_name).all()
+    return(event)
