@@ -1,6 +1,7 @@
 from website.models.event import Event
 from flask import flash, redirect, url_for
 from website.database import db
+import googlemaps
 
 def get_events():
     events = []
@@ -33,3 +34,24 @@ def get_searched_events(search):
     event = Event.query.filter(Event.event_name.like('%' + search + '%'))
     event = event.order_by(Event.event_name).all()
     return(event)
+
+
+def get_nearby_events():
+    client = googlemaps.Client('AIzaSyAtJ7llR6PgPC5skxCee2ao4umEAaXBfg8')
+    result = client.geolocate()
+    location = []
+    location.append(result['location']['lat'])
+    location.append(result['location']['lng'])
+    print(location)
+    near_me = []
+    for event in Event.query.all():
+        print(event.coordinates_lat)
+        print(location[0])
+        print(event.coordinates_long)
+        print(location[1])
+        distance = ((event.coordinates_lat - location[0])**2)+((event.coordinates_long - location[1])**2)
+        print(distance)
+        if abs(distance) <= 1:
+            near_me.append(event)
+    print(near_me)
+    return near_me

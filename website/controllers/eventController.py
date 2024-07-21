@@ -1,5 +1,6 @@
 from flask import request, render_template, jsonify, flash, redirect, url_for
-from website.services.events_services import get_event_by_id, get_free_events, get_popular_events, get_recommended_events, get_trending_events
+from website.services.events_services import get_event_by_id, get_free_events, get_popular_events, get_recommended_events, get_trending_events, get_nearby_events
+import json
 
 
 
@@ -11,7 +12,14 @@ def upcoming_events():
     return '<h1>Upcoming events</h1>'
 
 def nearby_events():
-    return render_template('nearbyEvents.html')
+    data = []
+    events = get_nearby_events()
+    for event in events:
+        data.append(event.coordinates_lat)
+        data.append(event.coordinates_long)
+    print(data)
+    print(events)
+    return render_template('nearbyEvents.html', data = json.dumps(data), events=events)
 
 def nightclub_events():
     return '<h1>Nightclubs</h1>'
