@@ -130,6 +130,25 @@ h4 {
     margin: 1px;
     border: 2px solid rgb(36, 10, 10); 
 }
+
+
+
+.image-text-container {
+    position: relative; 
+  }
+  
+  .image-text-container p {
+    position: absolute; 
+    bottom: 0px; 
+    left: 10px; 
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 5px; 
+    width: max-content;  
+    text-align: left;
+  }
+  
+
 .full-input {
     display: block;
     width: 100%;
@@ -141,6 +160,7 @@ h4 {
 .left-text {
     text-align: left;
 }
+
 
 
 @media (max-width: 400px) {

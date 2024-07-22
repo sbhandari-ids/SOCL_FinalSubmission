@@ -20,7 +20,7 @@ from website.routes.eventBP import event_blueprint
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'Hello World'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:A6d0a6m1!@localhost/socl'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://root:Admin123@localhost/socl'
     db.init_app(app)
 
 

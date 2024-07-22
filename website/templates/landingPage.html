@@ -8,6 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../static/styles/landingPage.css" rel="stylesheet">
     <title>Landing Page</title>
+    <style>
+       #logo-img {
+          animation: rotate 3s linear forwards; /* Animation properties */
+          transform-style: preserve-3d; /* Preserve 3D space for rotation */
+        }
+
+        @keyframes rotate {
+          from { transform: rotateX(90deg); } /* Start from 0 degrees rotation on Y-axis */
+          to { transform: rotateX(0deg); } /* End at 360 degrees for full circle on Y-axis */
+        }
+      </style>
 </head>
 <body>
     
@@ -19,5 +30,15 @@
             </section>
 
         </div>
+
+  <script>
+        document.addEventListener("click", function() {
+        window.location.href = "../start";
+      });
+      
+      setTimeout(function() {
+        window.location.href = "../start";
+      }, 5000); 
+  </script>
 </body>
 </html>

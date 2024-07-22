@@ -1,7 +1,9 @@
 from flask import request, render_template, jsonify, flash, redirect, url_for, session
 from website.services.userServices import create_user, loginU
 from flask_login import login_user, login_required, logout_user, current_user
-
+from werkzeug.utils import secure_filename
+from PIL import Image
+import os
 
 def sign_up_name():
     if request.method == 'GET':
@@ -46,6 +48,40 @@ def logout():
     return redirect(url_for('views_bp.home'))
 
 
+# **********************************************************************
+
+# if not os.path.exists('UserProfilePics'):
+#     os.makedirs('UserProfilePics')
+
+
+# def signup_age():
+#     if request.method == 'GET':
+#         return render_template("signup_age.html")
+#     elif request.method == 'POST':
+#         age = request.form.get('age')
+#         session['age'] = age
+#         return redirect(url_for('user_bp.signup_password'))
+    
+# def signup_phone():
+#     if request.method == 'GET':
+#         return render_template("signup_phone.html")
+#     elif request.method == 'POST':
+#         phone = request.form.get('phone')
+#         session['phone'] = phone
+#         return redirect(url_for('user_bp.signup_password'))
+
+
+# # @app.route('/upload_profile_pic', methods=['POST'])
+# def upload_profile_pic():
+#     file = request.files['profile-pic-input']
+#     filename = secure_filename(file.filename)
+#     file_path = os.path.join('UserProfilePics', filename)
+    
+#     img = Image.open(file)
+#     img = img.resize((500, 500))
+#     img.save(file_path)
+    
+#     return redirect(url_for('views_bp.home'))
 
 
 

@@ -9,3 +9,6 @@ user_blueprint.route('/signup-password', methods=['POST','GET'])(signup_password
 user_blueprint.route('/login', methods=['GET', 'POST'])(login)
 user_blueprint.route('/logout', methods=['GET'])(logout)
 
+
+
+# @app.route('/upload_profile_pic', methods=['POST']) 

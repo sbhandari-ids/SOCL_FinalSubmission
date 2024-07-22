@@ -71,8 +71,30 @@
                     </div>
                 </section>  
 
-                <section>
-                    <button type="button" class=" filled-btn full-input ">Purchase Tickets</button>
+                <section class="fixed-bottom">
+                    
+                    <button type="button" name="attend-btn" class="login-btn filled-btn">Purchase Tickets</button>
+                
+                    <label>People Going to Event: <span id="count">12</span></label>
+
+                    <script>
+                        const attendBtn = document.getElementById('attend-btn');
+                        const countLabel = document.getElementById('count');
+                        let count = 12;
+                        
+                        attendBtn.addEventListener('click', () => {
+                            // Toggle the button text
+                            if (attendBtn.textContent === 'Attend') {
+                                attendBtn.textContent = 'Attending';
+                                count++;
+                            } else {
+                                attendBtn.textContent = 'Attend';
+                                count--;
+                            }
+                            countLabel.textContent = count;
+                        });
+                    </script>
+
                 </section>
 
         </main>
